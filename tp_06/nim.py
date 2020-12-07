@@ -28,7 +28,7 @@ def main() -> None:
         "\nChoisissez le niveau de difficulté :\n"
         "0: facile\n1: difficile (valeur par défaut)"
     )
-    difficult = not difficult.isdigit() and int(difficult) == 0
+    difficult = difficult != "0"
     print(f"\nNiveau de difficulté : {'difficile' if difficult else 'facile'}")
 
     allumettes = 20

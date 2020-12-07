@@ -11,7 +11,7 @@ import config_pendu as config
 def finished(erreurs: int, mot: str, lettres: List[str]) -> None:
     """Test whether the game is finished or not."""
     return erreurs >= config.ERREUR_MAX or all(
-        lettre in lettres for lettre in mot
+        chr in lettres for chr in mot
     )
 
 
