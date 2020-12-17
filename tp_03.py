@@ -53,7 +53,7 @@ def max_0_consecutif(tableau: typing.List[int]) -> int:
     return max(max_0, counter)
 
 
-def absents(num: int = 100) -> int:
+def absents(num: int = 100) -> float:
     """Renvoie le nombre moyens d'éléments absents, pour n répétitions."""
     list_abs = []
     for _ in range(num):
@@ -63,14 +63,19 @@ def absents(num: int = 100) -> int:
 # On trouve une valeur de 36.8
 
 
-def descr(n_max: int) -> typing.Tuple[typing.List[int]]:
+def descr(n_max: int) -> typing.Tuple[
+    typing.List[int],
+    typing.List[int],
+    typing.List[int],
+    typing.List[int]
+]:
     """Fonction de "description" du slicing."""
     if not n_max % 2 or n_max < 2:
         raise ValueError("n_max must be greater than 1 and a multiple of 2.")
     base = list(range(n_max + 1))
     return (
-        base[:len(base) / 2],
-        base[len(base) / 2:],
+        base[:int(len(base) / 2)],
+        base[int(len(base) / 2):],
         base[::2],
         base[1::2]
     )

@@ -37,7 +37,7 @@ def duree(h1: int, m1: int, s1: int, h2: int, m2: int, s2: int) -> str:
 
 def entiers(start: int, end: int) -> None:
     """Print the integers between start and end."""
-    print("-".join(range(start, end + 1)))
+    print("-".join(str(i) for i in range(start, end + 1)))
 
 
 def entiers_not_7(start: int, end: int) -> None:
@@ -184,7 +184,7 @@ def lookandsay(term: str) -> str:
     return next_term + str(count) + current_char
 
 
-def first_terms(number: int) -> None:
+def first_terms(number: int) -> list:
     """Return the first terms of Conway's suite."""
     terms = ["1"]
     for _ in range(number - 1):

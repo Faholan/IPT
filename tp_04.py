@@ -182,7 +182,7 @@ def logistique2(mu, x0, n):
 def diagramme() -> None:
     """Trace le diagramme des bifurcations."""
     plt.figure(figsize=(8, 8))
-    mu = 2
+    mu = 2.
     while mu <= 4:
         terms = [0.9]
         for _ in range(200):
