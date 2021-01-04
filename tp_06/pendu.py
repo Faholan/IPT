@@ -8,7 +8,7 @@ from typing import List
 import config_pendu as config
 
 
-def finished(erreurs: int, mot: str, lettres: List[str]) -> None:
+def finished(erreurs: int, mot: str, lettres: List[str]) -> bool:
     """Test whether the game is finished or not."""
     return erreurs >= config.ERREUR_MAX or all(
         chr in lettres for chr in mot
@@ -20,7 +20,7 @@ def main() -> None:
     # Initialisation des variables
     mot = choice(config.MOTS)
     erreurs = 0
-    lettres = []
+    lettres: List[str] = []
     print(
         "Bienvenue dans le jeu du pendu ! Le mot secret comporte "
         f"{len(mot)} lettres"
