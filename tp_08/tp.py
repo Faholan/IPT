@@ -12,9 +12,7 @@ def premiers() -> int:
     """Calcule la somme des 1000 premiers nombres entiers."""
     with open(r"fichierEntree\premiers1000.txt", encoding="utf-8") as file:
         total = sum(
-            int(line.strip()) for line in file if line.strip() and (
-                int(line.strip()) <= 1000
-            )
+            int(line.strip()) for line in file if line.strip()
         )
     return total
 
