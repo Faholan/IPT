@@ -1,0 +1,3 @@
+Sharapova,2,Russie
+Williams,1,USA
+Mauresmo,3,France
