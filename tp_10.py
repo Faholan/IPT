@@ -22,7 +22,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-from math import exp
 import typing
 
 import matplotlib.pyplot as plt
@@ -159,7 +158,7 @@ def graphe_van_der(start: float, end: float, num: int) -> None:
 
 
 def graphe_phase(start: float, end: float, num: int) -> None:
-    """Trace le graphe de phases"""
+    """Trace le graphe de phase."""
     plt.figure()
     coords = np.linspace(0, 30, 301)
     for y0 in np.linspace(start, end, num):
