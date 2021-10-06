@@ -285,7 +285,7 @@ class Quaternion:
         mod = self.a ** 2 + self.b ** 2 + self.c ** 2 + self.d ** 2
         if mod == 0:
             raise ZeroDivisionError()
-        return Quaternion(self.a/m, -self.b/m, -self.c/m, -self.d/m)
+        return Quaternion(self.a/mod, -self.b/mod, -self.c/mod, -self.d/mod)
 
 
 def auto_int(q: Quaternion, u: Quaternion) -> Quaternion:
