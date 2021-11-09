@@ -64,7 +64,7 @@ def occurences2(source: t.Iterable[t.Hashable]) -> t.Dict[t.Hashable, int]:
 # Question 4
 def remove_repetitions(source: t.List[t.Any]) -> t.List[t.Any]:
     """Renvoie la liste sans répétitions."""
-    results = []
+    results: t.List[t.Any] = []
     for elem in source:
         if elem not in results:
             results.append(elem)
