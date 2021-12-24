@@ -16,7 +16,7 @@ SELECT Objet_a.ob_id AS objr_id,
     Objet_b.ob_id AS objo_id
     FROM Objet AS Objet_a
     JOIN Objet AS Objet_b ON Objet_a.sc_id = Objet_b.sc_id
-    JOIN Source USING ON Objet_a.sc_id = Source.sc_id
-    JOIN Scene USING ON Objet_a.sc_id = Scenea.sc_id
+    JOIN Source ON Objet_a.sc_id = Source.sc_id
+    JOIN Scene ON Objet_a.sc_id = Scenea.sc_id
     WHERE sc_nom = 'woodbox' AND OCCULTE(sc_id, Objet_a.ob_id, so_id, Objet_b.ob_id)
 ;
